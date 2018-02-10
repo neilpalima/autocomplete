@@ -2,6 +2,7 @@
   "name": "autocomplete",
   "version": "0.1.0",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "faker": "^4.1.0",
     "html-webpack-plugin": "^2.30.1",
     "lodash": "^4.17.5",

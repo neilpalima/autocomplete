@@ -1,16 +1,14 @@
-require('babel-polyfill');
-
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './src/index.html',
   filename: 'index.html',
-  inject: 'body'
+  // inject: 'body'
 });
 
 module.exports = {
-  entry: ['babel-polyfill', './src/index.jsx'],
+  entry: './src/index.html',
   output: {
     path: path.resolve('dist'),
     filename: 'index_bundle.js'
@@ -18,17 +16,22 @@ module.exports = {
   module: {
     loaders: [
       { 
-        test: /\.jsx?$/,
+        test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
-        query: {
-            presets: ['react', 'es2015']
-        } 
+        // query: {
+        //     presets: ['babel-preset-env', 'es2015']
+        // } 
+      },
+      { 
+        test: /\.html/, 
+        loader: 'file?name=[name].[ext]' ,
+        exclude: /node_modules/,
       }
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.html'],
   },
   plugins: [HtmlWebpackPluginConfig]
 }

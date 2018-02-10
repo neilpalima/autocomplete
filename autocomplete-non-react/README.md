@@ -1,3 +1,3 @@
 ## Sample Autocomplete
 
-Click `index.html` to view this
+Click `index.html` in `src` folder to view this
