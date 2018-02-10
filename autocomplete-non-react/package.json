@@ -2,14 +2,10 @@
   "name": "autocomplete-non-react",
   "version": "1.0.0",
   "description": "Click `index.html` to view this",
-  "main": "search.js",
+  "main": "html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "gulp": "^3.9.1",
-    "semantic-ui": "^2.2.14"
-  }
 }
